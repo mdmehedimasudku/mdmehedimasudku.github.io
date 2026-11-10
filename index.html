@@ -1,0 +1,795 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The professional portfolio of Md. Mehedi Masud — HR professional, HR operations and financial analysis.">
+  <meta name="author" content="Md. Mehedi Masud">
+  <title>Md. Mehedi Masud | Professional Portfolio</title>
+
+  <style>
+    :root {
+      --navy: #10243a;
+      --blue: #245b87;
+      --gold: #c69c55;
+      --light: #f5f7fa;
+      --white: #ffffff;
+      --text: #273548;
+      --muted: #718096;
+      --border: #e4e9ef;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* Navigation */
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: var(--navy);
+    }
+
+    /* Hero */
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 105px 0 110px;
+    }
+
+    .hero-content {
+      max-width: 790px;
+    }
+
+    .eyebrow {
+      color: #e2bc7c;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 66px);
+      line-height: 1.13;
+      margin-bottom: 22px;
+      letter-spacing: -2px;
+    }
+
+    .hero h2 {
+      font-size: clamp(17px, 2.5vw, 22px);
+      color: #d6e0eb;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 690px;
+      color: #c0cbd7;
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 23px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #172538;
+    }
+
+    .btn-outline {
+      border: 1px solid #9aabba;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* General sections */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(27px, 4vw, 36px);
+      margin-bottom: 18px;
+      line-height: 1.3;
+    }
+
+    .section-intro {
+      max-width: 730px;
+      color: var(--muted);
+      margin-bottom: 35px;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 17px;
+      color: #536174;
+    }
+
+    .info-card {
+      background: var(--light);
+      padding: 27px;
+      border-left: 4px solid var(--gold);
+      border-radius: 5px;
+    }
+
+    .info-card h3 {
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+
+    .info-card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #536174;
+    }
+
+    /* Highlights */
+
+    .highlights {
+      background: var(--light);
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .highlight-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 27px;
+      border-radius: 6px;
+    }
+
+    .highlight-card h3 {
+      color: var(--navy);
+      font-size: 29px;
+      margin-bottom: 8px;
+    }
+
+    .highlight-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Experience */
+
+    .experience-list {
+      display: grid;
+      gap: 22px;
+    }
+
+    .experience-card {
+      border: 1px solid var(--border);
+      padding: 28px;
+      border-radius: 6px;
+      border-left: 4px solid var(--blue);
+    }
+
+    .experience-card h3 {
+      color: var(--navy);
+      font-size: 20px;
+    }
+
+    .company {
+      color: var(--blue);
+      font-weight: bold;
+      margin: 4px 0 13px;
+      font-size: 14px;
+    }
+
+    .experience-card ul {
+      padding-left: 20px;
+      color: #536174;
+      font-size: 14px;
+    }
+
+    .experience-card li {
+      margin-bottom: 7px;
+    }
+
+    /* Expertise */
+
+    .expertise {
+      background: var(--light);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .expertise-item {
+      background: white;
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+    }
+
+    .expertise-item h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .expertise-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Leadership */
+
+    .leadership-card {
+      background: var(--navy);
+      color: white;
+      padding: 35px;
+      border-radius: 6px;
+    }
+
+    .leadership-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .leadership-card p {
+      color: #d0dbe5;
+    }
+
+    /* Contact */
+
+    .contact {
+      background: var(--light);
+      text-align: center;
+    }
+
+    .contact .section-intro {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .contact-links a {
+      background: var(--navy);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #0b1928;
+      color: #aebbc9;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    /* Mobile responsiveness */
+
+    @media (max-width: 760px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 22px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .about-grid,
+      .highlight-grid,
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        gap: 25px;
+      }
+
+      .experience-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">MEHEDI MASUD.</a>
+
+        <button class="menu-toggle" id="menuToggle"
+          aria-label="Toggle navigation" aria-expanded="false">
+          ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Professional Portfolio</div>
+
+          <h1>Md. Mehedi Masud</h1>
+
+          <h2>
+            HR Professional | HR Operations |
+            Financial Analysis
+          </h2>
+
+          <p>
+            I am a business graduate with professional experience
+            in human resource management, recruitment, HR operations,
+            employee management and financial administration.
+            I am interested in building better workplaces through
+            people-focused and data-driven decision-making.
+          </p>
+
+          <div class="buttons">
+            <a href="#experience" class="btn btn-primary">
+              Explore My Experience
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-text">
+            <div class="section-label">About Me</div>
+            <h2 class="section-title">
+              Combining People Management with Business Thinking
+            </h2>
+
+            <p>
+              My professional journey has given me exposure to
+              different areas of human resource management,
+              including talent acquisition, HR operations,
+              onboarding, performance management, HRIS and
+              organizational development.
+            </p>
+
+            <p>
+              I have also gained experience in financial and
+              administrative operations within the US home care
+              industry, including billing workflows, authorizations,
+              scheduling and team coordination.
+            </p>
+
+            <p>
+              I am particularly interested in HR analytics,
+              technology-enabled HR practices and data-driven
+              decision-making.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Professional Snapshot</h3>
+            <p><strong>Education:</strong> BBA in HRM</p>
+            <p><strong>Professional Development:</strong> PGD in HRM</p>
+            <p><strong>Core Area:</strong> Human Resource Management</p>
+            <p><strong>Additional Area:</strong> Financial Operations</p>
+            <p><strong>Interest:</strong> HR Analytics & People Analytics</p>
+            <p><strong>Location:</strong> Bangladesh</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="container">
+        <div class="section-label">Career Highlights</div>
+        <h2 class="section-title">Experience in Numbers</h2>
+
+        <p class="section-intro">
+          Selected contributions from my professional experience.
+        </p>
+
+        <div class="highlight-grid">
+
+          <div class="highlight-card">
+            <h3>250+</h3>
+            <p>Recruitment activities at US-Bangla Airlines</p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>500+</h3>
+            <p>Employee HR operations support at Edison Real Estate</p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>130</h3>
+            <p>Hiring contributions at Edison Real Estate</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-label">Career Journey</div>
+        <h2 class="section-title">Professional Experience</h2>
+
+        <p class="section-intro">
+          My experience across human resources, financial
+          operations and organizational support.
+        </p>
+
+        <div class="experience-list">
+
+          <article class="experience-card">
+            <h3>Financial Analyst</h3>
+            <div class="company">
+              Rahma Home Care Agency | October 2025 – Present
+            </div>
+            <ul>
+              <li>Manage billing-related activities, authorizations
+                and claim status follow-ups.</li>
+              <li>Coordinate scheduling and caregiver time
+                record corrections.</li>
+              <li>Support administrative and HR activities for
+                the Bangladesh-based team.</li>
+              <li>Participate in recruitment, employee onboarding
+                and team coordination.</li>
+              <li>Support US employee documentation and
+                payroll coordination.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <h3>Executive – HR / HR Generalist</h3>
+            <div class="company">
+              Edison Real Estate Ltd. | September 2024 – August 2025
+            </div>
+            <ul>
+              <li>Contributed to approximately 130 recruitment
+                and hiring activities.</li>
+              <li>Supported HR operations for a workforce of
+                more than 500 employees.</li>
+              <li>Assisted performance management across
+                18 teams.</li>
+              <li>Worked with HRIS and ERP systems and
+                supported employee data management.</li>
+              <li>Coordinated employee training and development
+                activities.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <h3>Human Resources – HR Operations</h3>
+            <div class="company">
+              US-Bangla Airlines
+            </div>
+            <ul>
+              <li>Contributed to recruitment activities involving
+                more than 250 employees.</li>
+              <li>Participated in training needs assessment
+                visits across three operational locations.</li>
+              <li>Supported the performance appraisal process
+                for approximately 3,000 employees.</li>
+              <li>Worked on recruitment policy updates,
+                HR operations and HRIS-related activities.</li>
+              <li>Supported onboarding, probation assessments
+                and employee administration.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <h3>HR Coordinator – Sales Force</h3>
+            <div class="company">
+              Vexim Communications | Akash DTH
+            </div>
+            <ul>
+              <li>Supported sales force recruitment and
+                onboarding activities.</li>
+              <li>Conducted approximately 180 interviews.</li>
+              <li>Contributed to 48 employee onboardings
+                against a recruitment target of 50.</li>
+              <li>Maintained sales force automation records
+                and supported performance monitoring.</li>
+              <li>Prepared salary and incentive-related sheets
+                and supported training activities.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise" id="expertise">
+      <div class="container">
+        <div class="section-label">Professional Capabilities</div>
+        <h2 class="section-title">Areas of Expertise</h2>
+
+        <p class="section-intro">
+          Functional areas in which I have developed
+          professional experience and interest.
+        </p>
+
+        <div class="expertise-grid">
+
+          <div class="expertise-item">
+            <h3>Talent Acquisition</h3>
+            <p>Recruitment, interviewing, selection and onboarding.</p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>HR Operations</h3>
+            <p>Employee administration, attendance, leave
+              and HR processes.</p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>Performance Management</h3>
+            <p>Performance appraisal, monitoring and
+              employee evaluation support.</p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>HRIS & ERP</h3>
+            <p>Employee data management and HR
+              technology systems.</p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>Learning & Development</h3>
+            <p>Training coordination and training needs assessment.</p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>Financial Operations</h3>
+            <p>Billing workflows, authorizations and
+              administrative coordination.</p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>HR Analytics</h3>
+            <p>Developing interest in workforce data,
+              reporting and analytical decision-making.</p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>People Management</h3>
+            <p>Team coordination, employee support
+              and organizational processes.</p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>Data & Technology</h3>
+            <p>Excel, HR technology and emerging
+              AI-enabled workplace tools.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <div class="container">
+        <div class="section-label">Beyond Professional Work</div>
+        <h2 class="section-title">Leadership & Engagement</h2>
+
+        <div class="leadership-card">
+          <h3>HRM Alumni Association, Khulna University</h3>
+          <p>
+            Associated with HRMAAKU, an alumni community
+            focused on professional networking, collaboration,
+            engagement and the development of the HRM community.
+          </p>
+          <p style="margin-top:15px;">
+            <strong>Theme:</strong>
+            Together we grow, empower, care and inspire.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-label">Let's Connect</div>
+        <h2 class="section-title">
+          Building Better Workplaces Together
+        </h2>
+
+        <p class="section-intro">
+          I am open to professional connections,
+          HR opportunities and meaningful collaborations.
+          Feel free to get in touch.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:YOUR-EMAIL@example.com">Email Me</a>
+
+          <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © <span id="year"></span> Md. Mehedi Masud.
+      All Rights Reserved.
+    </p>
+    <p>Personal Professional Portfolio</p>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Close navigation after selecting a link
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Automatic copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
