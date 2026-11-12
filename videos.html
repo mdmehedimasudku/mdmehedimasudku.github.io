@@ -1,0 +1,21 @@
+---
+layout: default
+title: Videos
+---
+<h1>Videos</h1><br>
+{% assign vids = site.videos | sort: "date" | reverse %}
+{% for v in vids %}
+<div class="card">
+  <h2>{{ v.title }}</h2>
+  <p class="date">{{ v.date | date: "%B %d, %Y" }}</p>
+  {% if v.video_file and v.video_file != "" %}
+    <video controls src="{{ v.video_file }}"></video>
+  {% elsif v.video_url and v.video_url != "" %}
+    {% assign embed = v.video_url | replace: "watch?v=", "embed/" | replace: "youtu.be/", "youtube.com/embed/" %}
+    <iframe src="{{ embed }}" allowfullscreen></iframe>
+  {% endif %}
+  {{ v.content | markdownify }}
+</div>
+{% else %}
+<p>No videos yet.</p>
+{% endfor %}
