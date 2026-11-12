@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} | Md. Mehedi Hasan Masud</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#10243a;--blue:#2864d8;--text:#26364a;--muted:#68778b;--bg:#f7f9fc;--border:#e6ebf2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--bg);line-height:1.7}
+h1,h2,h3,.brand{font-family:'Manrope',sans-serif;color:var(--navy)}
+a{text-decoration:none;color:var(--blue)}
+.container{width:min(900px,90%);margin:auto;padding:40px 0}
+header{background:#fff;border-bottom:1px solid var(--border)}
+header .container{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+header nav a{margin-left:20px;color:var(--navy);font-weight:600}
+.card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px}
+.card img,.card video,.card iframe{width:100%;border-radius:8px;margin:12px 0}
+.card iframe{aspect-ratio:16/9;border:0}
+.date{color:var(--muted);font-size:14px}
+.content img{max-width:100%}
+</style>
+</head>
+<body>
+<header><div class="container">
+  <a class="brand" href="/">Md. Mehedi Hasan Masud</a>
+  <nav><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/videos.html">Videos</a></nav>
+</div></header>
+<main class="container content">
+{{ content }}
+</main>
+</body>
+</html>
