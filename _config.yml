@@ -1,3 +1,4 @@
+future: true
 collections:
   videos:
     output: false
