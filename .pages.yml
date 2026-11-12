@@ -62,7 +62,7 @@ content:
         options:
           media: videos
       - name: video_url
-        label: Or YouTube/Vimeo link
+        label: Or YouTube link
         type: string
       - name: body
         label: Description
