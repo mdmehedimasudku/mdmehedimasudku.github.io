@@ -1,0 +1,15 @@
+---
+layout: default
+title: Blog
+---
+<h1>Blog & Articles</h1><br>
+{% for post in site.posts %}
+<div class="card">
+  {% if post.image %}<img src="{{ post.image }}" alt="{{ post.title }}">{% endif %}
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
+  <p>{{ post.description }}</p>
+</div>
+{% else %}
+<p>No posts yet.</p>
+{% endfor %}
