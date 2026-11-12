@@ -1,0 +1,10 @@
+collections:
+  videos:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
